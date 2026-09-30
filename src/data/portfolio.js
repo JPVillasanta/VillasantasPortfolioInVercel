@@ -1,4 +1,7 @@
-export const email = 'jhonpaulvillasanta937@gmail.com'
+export const emails = [
+  'jhonpaulvillasanta937@gmail.com',
+  'jhonpaulvillasanta@gmail.com',
+]
 export const github = 'https://github.com/JPVillasanta'
 
 export const projects = [

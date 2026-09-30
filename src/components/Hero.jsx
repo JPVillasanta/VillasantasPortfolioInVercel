@@ -1,4 +1,4 @@
-import { email, github } from '../data/portfolio'
+import { github } from '../data/portfolio'
 import Arrow from './Arrow'
 
 export default function Hero() {
@@ -11,7 +11,7 @@ export default function Hero() {
         <p className="hero-description">Computer Science student building web applications with React and Laravel. I began as a UI designer on WalangBrownout and grew into a full stack role.</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">View projects <Arrow /></a>
-          <a className="button button-outline" href={`mailto:${email}?subject=Portfolio%20inquiry`}>Contact me <Arrow diagonal /></a>
+          <a className="button button-outline" href="#contact">Contact me <Arrow diagonal /></a>
         </div>
         <div className="hero-social"><span>FIND ME ONLINE</span><a href={github} target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.facebook.com/jhonpaul.villasanta.3" target="_blank" rel="noreferrer">Facebook ↗</a></div>
       </div>
