@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Profile from './components/Profile'
 import About from './components/About'
 import Education from './components/Education'
 import Projects from './components/Projects'
@@ -14,6 +15,7 @@ export default function App() {
       <Header />
       <main id="top">
         <Hero />
+        <Profile />
         <About />
         <Education />
         <Projects />
