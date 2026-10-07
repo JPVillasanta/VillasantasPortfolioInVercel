@@ -5,3 +5,98 @@
 .education{padding-block:68px 90px;border-top:1px solid var(--border);align-items:start}.education-card{background:linear-gradient(110deg,#25202d,#1d1d20 72%);border:1px solid #51405d;border-radius:10px;padding:34px 38px;max-width:740px}.education-status{font:700 11px ui-monospace,Consolas,monospace;letter-spacing:.12em;color:var(--accent-light);margin:0 0 18px}.education-card h2{font-size:clamp(28px,3.2vw,42px);letter-spacing:-.05em;color:#f0eaf4;margin:0 0 10px}.education-school{color:#d8c8e2;font-size:17px;margin:0 0 15px}.education-year{display:inline-block;border:1px solid #51405d;background:#302539;color:#c7a1e5;font:650 11px ui-monospace,Consolas,monospace;padding:7px 10px;border-radius:4px;margin:0}@media(max-width:900px){.education{padding-block:60px 75px}}@media(max-width:600px){.education-card{padding:27px 24px}}
 
 .profile{display:grid;grid-template-columns:minmax(250px,.75fr) minmax(0,1.25fr);gap:clamp(36px,7vw,110px);align-items:center;padding-block:85px 105px;border-top:1px solid var(--border)}.profile-photo{position:relative;max-width:410px;aspect-ratio:1/1.1;border:1px solid #64477a;border-radius:12px;overflow:hidden;background:#25202d;box-shadow:12px 12px 0 #7f49b424}.profile-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 26%}.profile-photo-label{position:absolute;left:16px;bottom:16px;padding:8px 11px;background:#141414dd;border:1px solid #76538f;color:#e0c7f3;font:700 10px ui-monospace,Consolas,monospace;letter-spacing:.08em}.profile-copy h2{font-size:clamp(36px,4vw,58px);line-height:1.12;letter-spacing:-.055em;color:#f0eaf4;margin:18px 0 24px}.profile-copy h2 span{color:#ad78db}.profile-copy>p:not(.section-index){color:#b6afb9;font-size:15px;line-height:1.85;max-width:580px}@media(max-width:900px){.profile{grid-template-columns:1fr;gap:44px;padding-block:75px}.profile-photo{width:min(100%,410px)}}@media(max-width:600px){.profile{padding-block:60px}.profile-photo{width:min(100%,340px)}}
+
+/* Portfolio polish: native interactions, no animation dependencies. */
+.site-shell{overflow:clip}
+.site-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(16px);background:#141414f2}
+main section[id],#top{scroll-margin-top:110px}
+main:focus{outline:none}
+a:focus-visible,button:focus-visible{outline:2px solid #d6b4ff;outline-offset:5px;border-radius:4px}
+.skip-link{position:fixed;top:12px;left:12px;z-index:100;background:#bd8aef;color:#141414;padding:12px 18px;font-weight:700;transform:translateY(-160%)}
+.skip-link:focus{transform:translateY(0)}
+.site-header nav a{position:relative;min-height:44px;display:inline-flex;align-items:center;transition:color .18s}
+.site-header nav a::after{content:'';position:absolute;bottom:4px;left:0;right:0;height:2px;background:var(--accent-light);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.site-header nav a[aria-current],.site-header nav a:focus-visible{color:#e2c5fc}
+.site-header nav a[aria-current]::after{transform:scaleX(1)}
+.hero{background:radial-gradient(ellipse at 12% 18%,#7f49b40d,transparent 60%)}
+.hero-panel{transition:transform .3s,box-shadow .3s}
+.hero-social span,.hero-footnote{color:#aaa1b1}
+.site-footer{color:#aaa1b1}
+.button,.header-link,.text-link,.project-links a,.hero-social a{transition:color .2s,background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.button{border-radius:7px;min-height:46px}
+.button:active,.email-card:active{transform:translateY(0) scale(.98)}
+.button-primary,.button-light{background:#7840ac}
+.button-primary:hover,.button-light:hover{background:#854bb8;box-shadow:0 5px 22px #7f49b42e}
+.project-links a{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:9px 12px;border:1px solid #665174;border-radius:6px;background:#302539;white-space:normal}
+.project-card{transition:border-color .25s,transform .25s,box-shadow .25s,opacity .55s}
+.project-card:focus-within{border-color:#bd8aef;box-shadow:0 0 0 1px #bd8aef40}
+.skill-card,.education-card{transition:transform .25s,border-color .25s,opacity .55s;}
+.tags span,.skill-items span{line-height:1.5}
+.profile-photo{transition:box-shadow .3s}
+.profile-photo img{transition:transform .5s}
+.hero-footnote{display:inline-flex;align-items:center;min-height:44px}
+main section:not(.hero){transition:opacity .55s,transform .55s}
+.reveal-pending{opacity:0;transform:translateY(18px)}
+/* A keyboard visitor can always expose a section before interacting. */
+.reveal-pending:focus-within{opacity:1;transform:none}
+@media(hover:hover) and (pointer:fine){
+ .hero-panel:hover{transform:rotate(0);box-shadow:0 25px 80px #0008,6px 6px 0 #7f49b43b}
+ .skill-card:hover,.education-card:hover{border-color:#795596;transform:translateY(-3px)}
+ .profile-photo:hover img{transform:scale(1.025)}
+ .project-card:hover{box-shadow:0 14px 30px #0003}
+ .site-header nav a:hover::after{transform:scaleX(1)}
+}
+@media(max-width:600px){
+ .section-wrap{width:calc(100% - 36px)}
+ .site-header{padding-inline:18px;gap:16px}
+ .site-header nav{gap:10px}
+ .site-header nav a{font-size:12px}
+ .hero{padding-block:52px 64px;gap:36px;min-height:auto}
+ .hero h1{font-size:clamp(45px,12vw,70px)}
+ .hero-actions{align-items:stretch}
+ .hero-actions .button{flex:1 1 145px;gap:12px}
+ .hero-panel{transform:none;box-shadow:5px 5px 0 #7f49b42b}
+ .terminal-line{display:flex;gap:8px;flex-wrap:wrap}
+ .terminal-result{float:none;margin-left:auto}
+ .about,.projects,.skills{padding-block:62px}
+ .contact h2{font-size:clamp(38px,10vw,60px)}
+ .contact::after{pointer-events:none}
+ .email-card{padding:19px 16px}
+ .email-address{font-size:12px}
+ .project-links a{min-height:46px}
+ main section[id],#top{scroll-margin-top:88px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .reveal-pending{opacity:1;transform:none}
+ .button:hover,.project-card:hover,.email-card:hover,.skill-card:hover,.education-card:hover{transform:none}
+ .profile-photo:hover img{transform:none}
+}
+
+/* Education history and a brief, staggered introduction. */
+.education-history{min-width:0}
+.education-timeline{list-style:none;margin:28px 0 0;padding:0 0 0 25px;border-left:1px solid #665174}
+.education-entry{position:relative;padding:0 0 28px 7px}
+.education-entry:last-child{padding-bottom:0}
+.education-entry::before{content:'';position:absolute;left:-31px;top:5px;width:10px;height:10px;border-radius:50%;background:#bd8aef;box-shadow:0 0 0 4px #231c2a}
+.education-dates{margin:0 0 9px;color:#cba5ee;font:650 12px ui-monospace,Consolas,monospace}
+.education-entry h3{margin:0 0 8px;color:#f0eaf4;font-size:20px;letter-spacing:-.025em}
+.education-entry .education-school{margin:0;font-size:15px;line-height:1.6;color:#b6afb9}
+.education-year{line-height:1.6}
+@keyframes intro-slide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes intro-panel{from{opacity:0;transform:translateX(24px) rotate(1deg)}to{opacity:1;transform:translateX(0) rotate(1deg)}}
+@media(prefers-reduced-motion:no-preference){
+ .hero-copy>*{animation:intro-slide .6s ease-out backwards}
+ .hero-copy>:nth-child(2){animation-delay:.08s}
+ .hero-copy>:nth-child(3){animation-delay:.16s}
+ .hero-copy>:nth-child(4){animation-delay:.24s}
+ .hero-copy>:nth-child(5){animation-delay:.32s}
+ .hero-copy>:nth-child(6){animation-delay:.4s}
+ .hero-panel{animation:intro-panel .75s .2s ease-out backwards}
+}
+@media(max-width:600px){
+ @keyframes intro-panel{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+ .education-timeline{padding-left:21px}
+ .education-entry::before{left:-27px}
+}

@@ -1,4 +1,5 @@
 import './App.css'
+import useScrollReveal from './hooks/useScrollReveal'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Profile from './components/Profile'
@@ -10,10 +11,13 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 export default function App() {
+  const shellRef = useScrollReveal()
   return (
-    <div className="site-shell">
+    <div className="site-shell" ref={shellRef}>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Header />
-      <main id="top">
+      <main id="main-content" tabIndex={-1}>
+        <div id="top" />
         <Hero />
         <Profile />
         <About />
