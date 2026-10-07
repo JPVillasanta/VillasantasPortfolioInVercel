@@ -2,7 +2,6 @@ export const emails = [
   'jhonpaulvillasanta937@gmail.com',
   'jhonpaulvillasanta@gmail.com',
 ]
-export const github = 'https://github.com/JPVillasanta'
 
 export const projects = [
   {
@@ -13,8 +12,7 @@ export const projects = [
     role: 'UI Designer → Full Stack Developer',
     contribution: 'Started as the UI designer and later took on full stack development work across the frontend and backend.',
     stack: ['React', 'Laravel', 'PHP', 'MySQL'],
-    link: 'https://github.com/JESSIEWANTSLEARN/UnpaidDevFrontEnd',
-    secondLink: 'https://github.com/JESSIEWANTSLEARN/UnpaidDevBackEnd',
+    link: 'https://unpaiddevfrontend.onrender.com/',
     featured: true,
   },
   {
@@ -25,7 +23,7 @@ export const projects = [
     role: 'Developer / UI/UX Designer',
     contribution: 'Assigned to UI/UX wireframes, the student and admin modules, interface consistency, and frontend implementation.',
     stack: ['React', 'UI/UX', 'System design'],
-    link: 'https://github.com/JESSIEWANTSLEARN/CuyoTech-Student-Services-Information-System',
+    link: 'http://cuyotech-student-services-information.onrender.com/',
   },
   {
     number: '03',
@@ -35,8 +33,6 @@ export const projects = [
     role: 'Developer',
     contribution: 'Created the frontendReactApp and backendLaravelApp repositories as a practice foundation for React and Laravel integration.',
     stack: ['React', 'Laravel', 'REST API', 'CRUD'],
-    link: 'https://github.com/JPVillasanta/frontendReactApp',
-    secondLink: 'https://github.com/JPVillasanta/backendLaravelApp',
   },
   {
     number: '04',
@@ -46,7 +42,6 @@ export const projects = [
     role: 'Developer',
     contribution: 'Set up the Laravel application, database migrations, React/Inertia entry point, and task resource routes.',
     stack: ['Laravel', 'React', 'Inertia', 'MySQL'],
-    link: 'https://github.com/JPVillasanta/CRUDTaskManager',
   },
 ]
 
@@ -56,4 +51,3 @@ export const skills = [
   { title: 'Programming', items: ['C#', 'Java', 'Python'] },
   { title: 'Workflow & design', items: ['Git & GitHub', 'Postman', 'UI/UX wireframes', 'Testing'] },
 ]
-
