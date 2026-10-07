@@ -1,3 +1,4 @@
+import Arrow from './Arrow'
 
 export default function Header() {
   return (
@@ -9,6 +10,7 @@ export default function Header() {
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
+        <a className="header-link" href="https://github.com/JPVillasanta" target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a>
       </header>
   )
 }
