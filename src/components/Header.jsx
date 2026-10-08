@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Arrow from './Arrow'
 
-const links = ['about', 'projects', 'skills', 'contact']
+const links = ['about', 'education', 'projects', 'skills', 'contact']
 
 export default function Header() {
   const [active, setActive] = useState('')
