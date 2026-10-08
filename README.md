@@ -1,18 +1,69 @@
-https://villasantas-portfolio-in-vercel.vercel.app/
+# Jhon Paul Villasanta's Portfolio
 
-# React + Vite
+**Live:** https://villasantas-portfolio-in-vercel.vercel.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive portfolio website showcasing my full-stack development work across frontend and backend technologies. Built with React, Vite, and deployed on Vercel.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Scroll reveal animations** — Smooth fade-in effects as sections come into view
+- **Accessible design** — Semantic HTML, ARIA labels, keyboard navigation, skip links
+- **Mobile-first responsive** — Optimized for mobile, tablet, and desktop screens
+- **Dark mode theme** — Purple accents with a polished dark interface
+- **Live demo links** — Direct access to deployed projects
+- **Fast & lightweight** — Vite for instant HMR and optimized builds
 
-## React Compiler
+## Sections
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Hero** — Animated introduction with tagline and quick links
+- **Profile** — Photo and brief bio
+- **Education** — Academic background with timeline
+- **About** — Context on my journey and interests
+- **Projects** — Featured work with roles, contributions, and tech stacks
+- **Skills** — Frontend, backend, programming languages, and tools
+- **Contact** — Email options and call-to-action
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Frontend:** React 19, Vite, CSS Grid/Flexbox  
+**Styling:** Custom CSS with CSS variables for theming  
+**Tools:** ESLint, npm, Git  
+**Deployment:** Vercel (auto-deploys from GitHub main branch)
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+ and npm
+
+### Development
+
+```bash
+npm install
+npm run dev
+```
+
+Visit `http://localhost:5173` to view the site with hot module replacement (HMR).
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+├── components/        # Reusable React components
+├── data/             # Portfolio data (projects, skills)
+├── hooks/            # Custom hooks (useScrollReveal)
+├── assets/           # Images and media
+└── App.jsx          # Main app component
+```
